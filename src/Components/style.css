@@ -25,9 +25,25 @@ html{
     height: 500px;
     color: var(--secondary-color);
     box-shadow: 0 5px 10px var(--secondary-color);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     position: relative;
+}
+
+@media screen and (max-width: 1200px){
+    .header {
+        height: 100%;
+        grid-template-columns: 1fr;
+        align-items: center;
+        position: relative;
+        padding-bottom: 50px;
+    }
+
+    .row2 img{
+        display:none;
+    }
+
 }
 
 .header::before {
@@ -51,7 +67,7 @@ html{
 }
 
 .row2{
-    position: absolute;
+    /* position: absolute; */
     top: 10px;
     right: 150px;
     text-align: center;
@@ -66,7 +82,6 @@ html{
 .row1 h1 {
     font-size: 3rem;
     text-align: center;
-    margin-left: 35px;
     font-family: 'Bodoni Moda', serif;
 }
 
